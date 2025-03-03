@@ -1,9 +1,16 @@
 # Bot-Discord
 Projeto pessoal de um bot para Discord focado em melhorar a experiência em RPGs.
-Atualmente, o projeto está em fase inicial, mas a ideia é adicionar funcionalidades como:
-✅ Armazenamento de atributos e perícias
-✅ Sistema monetário
-✅ Gerenciamento de personagens (CRUD)
-✅ Outras mecânicas úteis para RPG
+### Tecnologias: Python, SQL, Discord API, Git
 
-Mais recursos serão implementados conforme o desenvolvimento avança. 🚀
+Este é um projeto em andamento para um bot de Discord focado em RPG. O bot atualmente possui um sistema de rolagem de dados limitado, que pode ser utilizado para ações dentro do jogo.
+
+## Funcionalidades Implementadas:
+- **Sistema de Rolagem de Dados**: permite rolar dados para realizar ações no RPG.
+
+## Funcionalidades Planejadas:
+- **Gerenciamento da Ficha de Personagens (CRUD)**: permitir a criação, leitura, atualização e exclusão de personagens no jogo.
+- **Sistema de Economia**: implementação de um sistema monetário para o RPG.
+- **Integração com APIs**: para trazer funcionalidades adicionais.
+
+## Em Desenvolvimento Contínuo
+O projeto está sendo constantemente aprimorado, com planos para adicionar novas funcionalidades e otimizar a experiência do usuário.
