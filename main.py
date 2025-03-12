@@ -54,10 +54,54 @@ async def roll(ctx, quantidade: int = 1, lados: int = 20, operacao: str = None, 
         total += bonus
     elif operacao == '-':
         total -= bonus
+    elif operacao in '*':
+        total *= bonus
+    elif operacao in '/':
+        total /= bonus
     
     operacao_str = f' {operacao} {bonus}' if operacao in ('+', '-') else ''
 
-    await ctx.send(f'**`{total}`** ⟵ {resultados} {quantidade}d{lados}{operacao_str}')
+    await ctx.send(f'**` {total} `** ⟵ {resultados} {quantidade}d{lados}{operacao_str}')
 
+
+@bot.command()
+async def status(ctx):
+    dumbell = '<:dumbell:1349403661729796216>'
+    usuario = ctx.author
+
+    embed = discord.Embed(
+        title = 'ㅤㅤㅤㅤㅤㅤㅤㅤ⌈ STATUS ⌋ㅤㅤㅤㅤㅤㅤㅤㅤ',
+        description = '',
+        colour=discord.Colour.from_str("#483D8B")   
+    )
+    embed.set_author(name = '')
+
+    embed.add_field (name = 'INFORMAÇÕES', value = '', inline = False)
+    embed.add_field (name = 'Rank Ninja:', value = 'Gennin', inline = True)
+    embed.add_field (name = 'Especialização:', value = 'Restringido', inline = True)
+    embed.add_field (name = 'Título:', value = 'Random', inline = True)
+
+    embed.add_field (name = '', value = '', inline = False)
+    embed.add_field(name = '', value = '', inline = False)
+
+    embed.add_field(name = 'CARACTERÍSTICAS', value = '', inline = False)
+    embed.add_field(name = '', value = '**Hit Points:** 23', inline = True)
+    embed.add_field(name = '', value = '**Chakra Points:** 4', inline = True)
+    embed.add_field(name = '', value = '**Level:** 10', inline = True)
+
+    embed.add_field(name = '', value = '', inline = False)
+    embed.add_field(name = '', value = '', inline = False)
+
+    embed.add_field(name = 'ATRIBUTOS', value = '', inline = False)
+    embed.add_field(name = '', value = f'{dumbell} **FOR:** 0',inline=True)
+    embed.add_field(name = '', value = ':athletic_shoe: **DEX:** 0', inline=True)
+    embed.add_field(name = '', value = ':shield: **CON:** 0', inline=True)
+    embed.add_field(name = '', value = '', inline = False)
+    embed.add_field(name = '', value = ':brain: **INT:** 0', inline = True )
+    embed.add_field(name = '', value = ':eye: **SAB:** 0', inline = True)
+    embed.add_field(name = '', value = ':speaking_head: **CAR:** 0', inline = True)
+
+    embed.set_footer(text=f'Pontos Restantes: 12 \nStatus de {usuario}')
+    await ctx.send(embed = embed)
 
 bot.run(TOKEN)
