@@ -11,11 +11,11 @@ TOKEN = os.getenv("TOKEN")
 
 try:
     conexao = psycopg2.connect(
-        host='',
-        port='',
-        dbname='',
-        user='',
-        password='',
+        host='localhost',
+        port=5432,
+        dbname='postgres',
+        user='postgres',
+        password='macaco',
         
     )
     
