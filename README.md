@@ -6,6 +6,7 @@ Este é um projeto em andamento para um bot de Discord focado em RPG. O bot atua
 
 ## Funcionalidades Implementadas:
 - **Sistema de Rolagem de Dados**: permite rolar dados para realizar ações no RPG.
+- **Acesso ao Banco de Dados**: agora o bot conta acesso ao banco de dados que será utilizado em todo o resto do projeto.
 
 ## Funcionalidades Planejadas:
 - **Gerenciamento da Ficha de Personagens (CRUD)**: permitir a criação, leitura, atualização e exclusão das fichas dos personagens.
